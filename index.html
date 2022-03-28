@@ -20,9 +20,14 @@
 <div class="container" align="center">
 
 <div id="btnLaunchGame"><button class="btn btn-hg btn-danger" id="launchGame">Lancer le jeu</button></div>
-<h1><div id="histoire"></div></h1>
+<h4><div id="histoire"></div></h4>
 
-<div id="btnLaunchGame2"><button class="btn btn-info" id="carryOneStory"><i class="fa-solid fa-arrow-right-long"></i></button></div>
+<div id="btnLaunchGame2"><button class="btn btn-info" ><i class="fa-solid fa-arrow-right-long"></i></button></div>
+<div id="btnLaunchGame3"><button class="btn btn-info" ><i class="fa-solid fa-arrow-right-long"></i></button></div>
+<div id="btnLaunchGame4"><button class="btn btn-info" ><i class="fa-solid fa-arrow-right-long"></i></button></div>
+<div id="btnLaunchGame5"><button class="btn btn-info" ><i class="fa-solid fa-arrow-right-long"></i></button></div>
+<div id="btnLaunchGame6"><button class="btn btn-danger btn-hg"><i class="fa-solid fa-sword"></i> Combattre le robot</button></div>
+
 </div>
 
 
@@ -49,6 +54,10 @@
 
 $("#histoire1").hide();
 $("#btnLaunchGame2").hide();
+$("#btnLaunchGame3").hide();
+$("#btnLaunchGame4").hide();
+$("#btnLaunchGame5").hide();
+$("#btnLaunchGame6").hide();
 
 $("#btnLaunchGame").click(function(){
 	$("#btnLaunchGame").fadeOut("slow", function(){
@@ -65,8 +74,38 @@ $("#btnLaunchGame").click(function(){
 
 $("#btnLaunchGame2").click(function(){
 	$("#histoire").fadeOut('slow', function(){
-		$("#histoire").html("Tu remarques que tes chats ont disparus...").slideDown("slow")
-	})
-})
+		$("#histoire").html("Tu remarques que tes chats ont disparus...").slideDown("slow");
+		$("#btnLaunchGame2").hide("slow", function(){
+			$("#btnLaunchGame3").show("slow");
+		});
+	});
+});
 
+$("#btnLaunchGame3").click(function(){
+	$("#histoire").fadeOut('slow', function(){
+		$("#histoire").html("Une lettre est posée sur la table...").slideDown("slow");
+		$("#btnLaunchGame3").hide("slow", function(){
+			$("#btnLaunchGame4").show("slow");
+		});
+	});
+});
+
+$("#btnLaunchGame4").click(function(){
+	$("#histoire").fadeOut('slow', function(){
+		$("#histoire").html('<h4>"J\'ai kidnappé tes chats. <br> Si tu souhaites les récupérer, tu devras jouer une partie de Pierre, Feuille, Ciseaux, contre moi ! Si jamais tu gagnes 10 points, tu pourras les récupérer. <br>Sinon...<br><strong>Je les mangerais !</strong><br><br> - Robbie le Robot"</h4>').slideDown("slow");
+		$("#btnLaunchGame4").hide("slow", function(){
+			$("#btnLaunchGame5").show("slow");
+		});
+	});
+});
+
+
+$("#btnLaunchGame5").click(function(){
+	$("#btnLaunchGame5").hide("slow");
+	$("#histoire").hide("slow", function(){
+		$("#histoire").html("<img src='img/robot.jpg'class='img-thumbnail'>").show('slow');
+	$("#btnLaunchGame6").show("slow");
+	});
+	
+})
 </script>
