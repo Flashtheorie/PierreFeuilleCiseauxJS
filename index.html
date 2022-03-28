@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pierre Feuille Ciseaux</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://kit.fontawesome.com/7ab095b2cf.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<style>
+	body {
+  margin: 0;
+  padding: 0;
+  background-color: #34495e;
+  color:  #ecf0f1;
+}
+</style>
+<div class="container" align="center">
+
+<div id="btnLaunchGame"><button class="btn btn-hg btn-danger" id="launchGame">Lancer le jeu</button></div>
+<h1><div id="histoire"></div></h1>
+
+<div id="btnLaunchGame2"><button class="btn btn-info" id="carryOneStory"><i class="fa-solid fa-arrow-right-long"></i></button></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<script>
+	let playerOne = "Robbie le robot";
+ // let playerTwo = prompt("Quel est votre prénom ?");
+
+$("#histoire1").hide();
+$("#btnLaunchGame2").hide();
+
+$("#btnLaunchGame").click(function(){
+	$("#btnLaunchGame").fadeOut("slow", function(){
+		$("#histoire").html("Tu rentres du boulot paisiblement...", function(){
+			$("#histoire")
+		}).show("slow", function(){
+			$("#btnLaunchGame2").show("slow");
+		});
+	
+	});
+	
+}); // btnLaunchGameCLick
+
+
+$("#btnLaunchGame2").click(function(){
+	$("#histoire").fadeOut('slow', function(){
+		$("#histoire").html("Tu remarques que tes chats ont disparus...").slideDown("slow")
+	})
+})
+
+</script>
